@@ -1,0 +1,46 @@
+body {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+input.yt-input {
+  height: 48px;
+  width: 100%;
+  list-style: 48px;
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+.yt-btn {
+  border-radius: 19px;
+  background-color: var(--primary-color);
+  min-width: 120px;
+  height: 38px;
+  color: #000;
+  font-size: 0.7rem;
+  letter-spacing: -0.25px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.banner {
+  ol {
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+
+    a,
+    li.active {
+      color: #1d1d1b;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  }
+}

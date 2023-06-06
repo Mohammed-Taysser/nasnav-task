@@ -3,7 +3,7 @@
 - The only required functionality is **add to cart**.
 - Task should be delivered as a github public repository and deployed to github pages.
 
-The task is to implement this design in react following these rules:
+The task is to implement [this design](https://xd.adobe.com/view/2186e175-b022-45db-a2f4-c9ba6e4bde30-74d5/) in react following these rules:
 
 - [ ] File types should be js + jsx + scss.
 - [ ] Folder structure:

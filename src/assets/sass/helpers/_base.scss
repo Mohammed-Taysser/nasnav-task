@@ -46,3 +46,59 @@ input.yt-input {
     }
   }
 }
+
+.single-product {
+  font-weight: 700;
+
+  .sub-section {
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+
+    .current {
+      color: var(--secondary-color);
+      font-size: 1.3rem;
+    }
+
+    .old {
+      color: #a7a9ac;
+      text-decoration: line-through;
+    }
+
+    .discount {
+      background-color: var(--primary-color);
+      min-width: 60px;
+      height: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .carousel-wrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & > img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .colors {
+    .active {
+      border: 1px solid var(--secondary-color);
+    }
+  }
+}

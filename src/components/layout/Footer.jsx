@@ -80,7 +80,7 @@ function Footer() {
             <h5>Subscribe to our newsletter</h5>
             <form className='footer-form'>
               <input type='text' placeholder='Enter Your Mail' />
-              <button className='yt-btn' type='submit'>
+              <button className='yt-btn sm' type='submit'>
                 Subscript
                 <span>
                   <img src={sendIcon} alt='send' width={20} height={20} />
@@ -99,21 +99,36 @@ function Footer() {
           </div>
         </div>
 
-        <div className="row items-center justify-between copy-right">
-          <div className="col-lg-4 my-3">
-            <p className="mb-0">© 2021 yeshtery, all rights reserved.</p>
+        <div className='row items-center justify-between copy-right'>
+          <div className='col-lg-4 my-3'>
+            <p className='mb-0'>© 2021 yeshtery, all rights reserved.</p>
           </div>
-          <div className="col-lg-5 my-3">
-            <div className="flex items-center gap-2 justify-end">
-            <img src={cashOnDelivery} alt="cash-on-delivery" width={102} height={40} />
-            <img src={mastercard} alt="mastercard-favicon" width={65} height={40} />
-            <img src={visa} alt="visa-favicon" width={65} height={40} />
+          <div className='col-lg-5 my-3'>
+            <div className='flex items-center gap-2 justify-end'>
+              <img
+                src={cashOnDelivery}
+                alt='cash-on-delivery'
+                width={102}
+                height={40}
+              />
+              <img
+                src={mastercard}
+                alt='mastercard-favicon'
+                width={65}
+                height={40}
+              />
+              <img src={visa} alt='visa-favicon' width={65} height={40} />
             </div>
           </div>
-          <div className="col-lg-3 my-3">
-            <div className="flex items-center justify-end gap-2">
+          <div className='col-lg-3 my-3'>
+            <div className='flex items-center justify-end gap-2'>
               <span className='font-bold'>Powered By</span>
-              <img src={nasnavFavicon} alt="nasnav-favicon" width={100} height={19} />
+              <img
+                src={nasnavFavicon}
+                alt='nasnav-favicon'
+                width={100}
+                height={19}
+              />
             </div>
           </div>
         </div>

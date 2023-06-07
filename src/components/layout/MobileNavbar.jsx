@@ -29,7 +29,12 @@ function TopNavbar() {
             <div className='flex items-center gap-4 justify-end'>
               <img src={search} alt='search' width={24} height={24} />
 
-              <div className='cart-container'>
+              <div
+                className='cart-container cursor-pointer'
+                data-bs-toggle='offcanvas'
+                data-bs-target='#offcanvas-cart'
+                aria-controls='offcanvas-cart'
+              >
                 <span className='cart-counter'>{cart.length}</span>
                 <img src={cartIcon} alt='cart' width={24} height={24} />
               </div>

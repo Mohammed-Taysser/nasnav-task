@@ -1,12 +1,14 @@
 import React from 'react';
-import Navbar from './Navbar';
+import CartOffcanvas from '../CartOffcanvas';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 function Layout(props) {
   return (
     <>
       <Navbar />
       {props.children}
+      <CartOffcanvas />
       <Footer />
     </>
   );

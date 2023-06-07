@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import Banner from '../components/Banner';
-import ProductsList from '../components/ProductsList';
 import Quantity from '../components/Quantity';
 import Rating from '../components/Rating';
 import Layout from '../components/layout';
@@ -13,6 +12,7 @@ import {
   SIMILAR_PRODUCTS,
   SINGLE_PRODUCT,
 } from '../services/products';
+const ProductsList = React.lazy(() => import('../components/ProductsList'));
 
 import rotate360 from '../images/icons/360.png';
 import arrowLeft from '../images/icons/arrow-left.png';
@@ -124,11 +124,21 @@ function SingleProduct() {
           </div>
         </div>
       </div>
-      <ProductsList
-        title='Similar Products'
-        subtitle='You may like these products also'
-        products={SIMILAR_PRODUCTS}
-      />
+      <Suspense
+        fallback={
+          <div className='h-28 flex justify-center items-center'>
+            <div className='spinner-border text-dark' role='status'>
+              <span className='visually-hidden'>Loading...</span>
+            </div>
+          </div>
+        }
+      >
+        <ProductsList
+          title='Similar Products'
+          subtitle='You may like these products also'
+          products={SIMILAR_PRODUCTS}
+        />
+      </Suspense>
     </Layout>
   );
 }

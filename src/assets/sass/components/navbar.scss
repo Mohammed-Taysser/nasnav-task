@@ -1,0 +1,146 @@
+.top-navbar {
+  box-shadow: 0px 0.73px 2px #00000080;
+  background-color: var(--primary-color);
+  height: 48px;
+  font-size: 0.85rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.category-navbar {
+  box-shadow: 0px 0.87px 2px #00000040;
+  background-color: #000000;
+  color: #fff;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+
+        &.offer {
+          color: #f11133;
+        }
+      }
+    }
+  }
+}
+
+.main-navbar {
+  height: 84px;
+  background-color: #fff;
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  .search-form {
+    position: relative;
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+    }
+
+    input {
+      border: 1px solid #d8d8d8;
+      outline: 0;
+      width: 100%;
+      border-radius: 24px;
+      height: 48px;
+      padding-left: 45px;
+
+      &::placeholder {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .cart-container {
+    position: relative;
+
+    .cart-counter {
+      background-color: var(--primary-color);
+      font-size: 0.7rem;
+      font-weight: bold;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      top: -9px;
+      right: -7px;
+    }
+  }
+}
+
+.mobile-navbar {
+  box-shadow: 0px 0.73px 2px #00000080;
+  background-color: var(--primary-color);
+  height: 48px;
+  font-size: 0.85rem;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  .mobile-top-navbar {
+    .cart-container {
+      position: relative;
+
+      .cart-counter {
+        color: var(--primary-color);
+        background-color: #000;
+        font-size: 0.7rem;
+        font-weight: bold;
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        top: -9px;
+        right: -7px;
+      }
+    }
+  }
+
+  .mobile-bottom-navbar {
+    align-items: center;
+    background: #fff 0 0 no-repeat padding-box;
+    bottom: 0;
+    box-shadow: 0 0.48px 2px #000;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    left: 0;
+    padding-inline: 22px;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    font-size: 10px;
+    font-weight: 600;
+  }
+}

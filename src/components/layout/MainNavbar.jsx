@@ -1,11 +1,15 @@
 import React from 'react';
-import cart from '../../images/icons/cart.svg';
-import user from '../../images/icons/user.svg';
+import { UseCartContext } from '../../context/cart';
+
+import favicon from '../../images/icons/addidas-favicon.svg';
+import cartIcon from '../../images/icons/cart.svg';
 import heart from '../../images/icons/heart.svg';
 import search from '../../images/icons/search.svg';
-import favicon from '../../images/icons/addidas-favicon.svg';
+import user from '../../images/icons/user.svg';
 
 function MainNavbar() {
+  const [cart] = UseCartContext();
+
   return (
     <div className='main-navbar'>
       <div className='container h-100'>
@@ -35,8 +39,8 @@ function MainNavbar() {
             <div className='flex items-center gap-4 justify-end'>
               <div className='flex items-center gap-2'>
                 <div className='cart-container'>
-                  <span className='cart-counter'>0</span>
-                  <img src={cart} alt='cart' width={24} height={24} />
+                  <span className='cart-counter'>{cart.length}</span>
+                  <img src={cartIcon} alt='cart' width={24} height={24} />
                 </div>
                 <strong className='d-none d-lg-inline-block'>Cart</strong>
               </div>

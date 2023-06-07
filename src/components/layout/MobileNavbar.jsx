@@ -1,6 +1,8 @@
 import React from 'react';
+import { UseCartContext } from '../../context/cart';
+
 import brands from '../../images/icons/brands.svg';
-import cart from '../../images/icons/cart.svg';
+import cartIcon from '../../images/icons/cart.svg';
 import category from '../../images/icons/category.svg';
 import hamburger from '../../images/icons/hamburger.png';
 import heart from '../../images/icons/heart.svg';
@@ -10,6 +12,8 @@ import search from '../../images/icons/search.svg';
 import favicon from '../../images/icons/yeshtery-dark.png';
 
 function TopNavbar() {
+  const [cart] = UseCartContext();
+
   return (
     <div className='mobile-top-navbar h-100'>
       <div className='container h-100'>
@@ -26,8 +30,8 @@ function TopNavbar() {
               <img src={search} alt='search' width={24} height={24} />
 
               <div className='cart-container'>
-                <span className='cart-counter'>0</span>
-                <img src={cart} alt='cart' width={24} height={24} />
+                <span className='cart-counter'>{cart.length}</span>
+                <img src={cartIcon} alt='cart' width={24} height={24} />
               </div>
               <img src={heart} alt='heart' width={24} height={24} />
             </div>

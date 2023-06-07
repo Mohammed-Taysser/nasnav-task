@@ -15,6 +15,7 @@ import product3 from '../images/products/product-3.png';
 import product4 from '../images/products/product-4.png';
 
 const SINGLE_PRODUCT = {
+  id: 1,
   title:
     'Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   category: 'Men',

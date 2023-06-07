@@ -4,10 +4,12 @@ function Price(props) {
   return (
     <div className='price'>
       <div className='current'>
-        {props.price}
+        {props.price.toLocaleString()}
         <small className='ml-1 text-sm'>{props.currency}</small>
       </div>
-      <div className='old'>{props.oldPrice}</div>
+      <div className='old'>
+        {props.oldPrice.toLocaleString()} {props.currency}
+      </div>
       <div className='discount'>{props.discount}</div>
     </div>
   );

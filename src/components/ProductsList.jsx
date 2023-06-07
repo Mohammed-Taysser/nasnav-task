@@ -27,12 +27,15 @@ function ProductsList(props) {
                   <div className='flex items-center justify-between'>
                     <div className='min-h-[62px]'>
                       <h6 className='price current'>
-                        {product.price}{' '}
+                        {product.price.toLocaleString()}{' '}
                         <small className='text-sm'>{product.currency}</small>
                       </h6>
                       {product.discount && (
                         <div className='flex items-center gap-3 mb-3'>
-                          <div className='price old'>{product.oldPrice}</div>
+                          <div className='price old'>
+                            {product.oldPrice.toLocaleString()}{' '}
+                            {product.currency}
+                          </div>
                           <div className='discount'>{product.discount}</div>
                         </div>
                       )}

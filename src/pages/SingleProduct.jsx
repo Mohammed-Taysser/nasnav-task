@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Banner from '../components/Banner';
 import ProductsList from '../components/ProductsList';
 import Quantity from '../components/Quantity';
+import Rating from '../components/Rating';
 import Layout from '../components/layout';
 import Colors from '../components/single-product/Colors';
 import Price from '../components/single-product/Price';
-import Rating from '../components/Rating';
 import Sizes from '../components/single-product/Sizes';
+import { UseCartContext } from '../context/cart';
 import {
   BANNER_URLS,
   SIMILAR_PRODUCTS,
@@ -18,9 +19,15 @@ import arrowLeft from '../images/icons/arrow-left.png';
 import arrowRight from '../images/icons/arrow-right.png';
 
 function SingleProduct() {
+  const [cart, addToCart] = UseCartContext();
   const [size, setSize] = useState(2);
   const [color, setColor] = useState(0);
   const [quantity, setQuantity] = useState(1);
+
+  const onAddToCartClick = () => {
+    addToCart({ ...SINGLE_PRODUCT, quantity });
+    setQuantity(1);
+  };
 
   return (
     <Layout>
@@ -105,7 +112,12 @@ function SingleProduct() {
                 <Quantity quantity={quantity} setQuantity={setQuantity} />
               </div>
               <div className='flex gap-3 items-center w-100 mt-4'>
-                <button className='w-50 yt-btn secondary'>Add To Cart</button>
+                <button
+                  className='w-50 yt-btn secondary'
+                  onClick={onAddToCartClick}
+                >
+                  Add To Cart
+                </button>
                 <button className='w-50 yt-btn'>Pickup From Store</button>
               </div>
             </div>

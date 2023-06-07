@@ -37,13 +37,13 @@ function MainNavbar() {
           </div>
           <div className='col-md-4'>
             <div className='flex items-center gap-4 justify-end'>
-              <div className='flex items-center gap-2'>
-                <div
-                  className='cart-container cursor-pointer'
-                  data-bs-toggle='offcanvas'
-                  data-bs-target='#offcanvas-cart'
-                  aria-controls='offcanvas-cart'
-                >
+              <div
+                className='flex items-center gap-2 cursor-pointer'
+                data-bs-toggle='offcanvas'
+                data-bs-target='#offcanvas-cart'
+                aria-controls='offcanvas-cart'
+              >
+                <div className='cart-container '>
                   <span className='cart-counter'>{cart.length}</span>
                   <img src={cartIcon} alt='cart' width={24} height={24} />
                 </div>
